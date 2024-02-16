@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Asteroid</title>
+    <style>
+        body {
+            background-color: #FFFFFF; /* Set the background color to white */
+            color: #000000; /* Set text color to black */
+            font-family: Arial, sans-serif; /* Set the font family */
+            padding: 20px; /* Add some padding for better readability */
+        }
+        h1 {
+            text-align: center; /* Center the heading */
+        }
+        .predict-form {
+            max-width: 800px; /* Limit the width of form */
+            margin: 0 auto; /* Center the form horizontally */
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        .predict-form label {
+            display: block; /* Display labels as block elements */
+            margin-bottom: 10px; /* Add space between labels */
+        }
+        .predict-form input[type="text"] {
+            width: calc(100% - 20px); /* Full width input minus padding */
+            padding: 10px; /* Add padding */
+            margin-bottom: 20px; /* Add space between inputs */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .predict-form button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px; /* Add padding */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .predict-form table {
+            width: 100%; /* Full width table */
+            border-collapse: collapse; /* Collapse border */
+            margin-bottom: 20px; /* Add space between table and form */
+        }
+        .predict-form th, .predict-form td {
+            padding: 10px; /* Add padding */
+            text-align: left; /* Left-align text */
+            border: 1px solid #ddd; /* Add border */
+        }
+        .predict-form th {
+            background-color: #f2f2f2; /* Light gray background for table header */
+        }
+    </style>
+</head>
+<body>
+    <h1>Predict Asteroid</h1>
+    <div class="predict-form">
+        <form action="{{ url_for('predict') }}" method="post">
+            <label for="neo">neo:</label>
+            <input type="text" id="neo" name="neo" placeholder="Enter neo value">
+
+            <label for="H">H:</label>
+            <input type="text" id="H" name="H" placeholder="Enter H value">
+
+            <label for="epoch">epoch:</label>
+            <input type="text" id="epoch" name="epoch" placeholder="Enter epoch value">
+
+            <label for="e">e:</label>
+            <input type="text" id="e" name="e" placeholder="Enter e value">
+
+            <label for="a">a:</label>
+            <input type="text" id="a" name="a" placeholder="Enter a value">
+
+            <label for="q">q:</label>
+            <input type="text" id="q" name="q" placeholder="Enter q value">
+
+            <label for="om">om:</label>
+            <input type="text" id="om" name="om" placeholder="Enter om value">
+
+            <label for="W">W:</label>
+            <input type="text" id="W" name="W" placeholder="Enter W value">
+
+            <label for="ad">ad:</label>
+            <input type="text" id="ad" name="ad" placeholder="Enter ad value">
+
+            <label for="n">n:</label>
+            <input type="text" id="n" name="n" placeholder="Enter n value">
+
+            <label for="per">per:</label>
+            <input type="text" id="per" name="per" placeholder="Enter per value">
+            
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
